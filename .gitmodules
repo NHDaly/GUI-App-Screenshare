@@ -1,0 +1,8 @@
+[submodule "gui"]
+	path = gui
+	url = git@github.com:NHDaly/SDL-GUI-Library.git
+
+[submodule "utility"]
+	path = utility
+	url = /Users/Daly/Documents/School/EECS/Labs/GitHub/NathanUtility
+
