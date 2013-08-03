@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23043E5417A6204100FC6466 /* AppleScriptLink.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23043E5217A6204100FC6466 /* AppleScriptLink.mm */; };
+		23043E5717A627DE00FC6466 /* ScreenGrabber.m in Sources */ = {isa = PBXBuildFile; fileRef = 23043E5617A627DE00FC6466 /* ScreenGrabber.m */; };
+		2338DDD917AB73FF001C0333 /* Compatibility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2338DD5917AB73FF001C0333 /* Compatibility.cpp */; };
+		2338DDDA17AB73FF001C0333 /* GameDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2338DD5B17AB73FF001C0333 /* GameDisplay.cpp */; };
+		2338DDDB17AB73FF001C0333 /* GUIApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2338DD5E17AB73FF001C0333 /* GUIApp.cpp */; };
+		2338DDDC17AB73FF001C0333 /* GUIAudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2338DD6017AB73FF001C0333 /* GUIAudio.cpp */; };
+		2338DDDD17AB73FF001C0333 /* GUIController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2338DD6417AB73FF001C0333 /* GUIController.cpp */; };
+		2338DDDF17AB73FF001C0333 /* GUIImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2338DD6A17AB73FF001C0333 /* GUIImage.cpp */; };
+		2338DDE017AB73FF001C0333 /* GUIImageCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2338DD6C17AB73FF001C0333 /* GUIImageCache.cpp */; };
+		2338DDF717AB73FF001C0333 /* GUIImageView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2338DD8517AB73FF001C0333 /* GUIImageView.cpp */; };
+		2338DDF817AB73FF001C0333 /* GUILetter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2338DD8717AB73FF001C0333 /* GUILetter.cpp */; };
+		2338DDF917AB73FF001C0333 /* GUIMsg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2338DD8917AB73FF001C0333 /* GUIMsg.cpp */; };
+		2338DDFA17AB73FF001C0333 /* GUIMsgNew.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2338DD8B17AB73FF001C0333 /* GUIMsgNew.cpp */; };
+		2338DDFB17AB73FF001C0333 /* GUIScrollView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2338DD8D17AB73FF001C0333 /* GUIScrollView.cpp */; };
+		2338DDFC17AB73FF001C0333 /* GUISpreadsheet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2338DD8F17AB73FF001C0333 /* GUISpreadsheet.cpp */; };
+		2338DDFD17AB73FF001C0333 /* GUITextViews.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2338DD9117AB73FF001C0333 /* GUITextViews.cpp */; };
+		2338DDFE17AB73FF001C0333 /* GUITimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2338DD9317AB73FF001C0333 /* GUITimer.cpp */; };
+		2338DDFF17AB73FF001C0333 /* GUIUtility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2338DD9517AB73FF001C0333 /* GUIUtility.cpp */; };
+		2338DE0017AB73FF001C0333 /* GUIValBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2338DD9717AB73FF001C0333 /* GUIValBox.cpp */; };
+		2338DE0117AB73FF001C0333 /* GUIView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2338DD9917AB73FF001C0333 /* GUIView.cpp */; };
+		2338DE0217AB73FF001C0333 /* GUIWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2338DD9B17AB73FF001C0333 /* GUIWindow.cpp */; };
+		2338DE0317AB73FF001C0333 /* Letter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2338DDCB17AB73FF001C0333 /* Letter.cpp */; };
+		2338DE0517AB73FF001C0333 /* NewNewGUITextView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2338DDCF17AB73FF001C0333 /* NewNewGUITextView.cpp */; };
+		2338DE0617AB73FF001C0333 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2338DDD217AB73FF001C0333 /* SDL.framework */; };
+		2338DE0717AB73FF001C0333 /* SDL_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2338DDD317AB73FF001C0333 /* SDL_image.framework */; };
+		2338DE0817AB73FF001C0333 /* SDL_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2338DDD417AB73FF001C0333 /* SDL_mixer.framework */; };
+		2338DE0917AB73FF001C0333 /* SDL_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2338DDD517AB73FF001C0333 /* SDL_ttf.framework */; };
+		2338DE0A17AB73FF001C0333 /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2338DDD717AB73FF001C0333 /* SDLMain.m */; };
+		2338DE0E17AB7445001C0333 /* GUIFonts in Resources */ = {isa = PBXBuildFile; fileRef = 2338DE0B17AB7445001C0333 /* GUIFonts */; };
+		2338DE0F17AB7445001C0333 /* GUIImages in Resources */ = {isa = PBXBuildFile; fileRef = 2338DE0C17AB7445001C0333 /* GUIImages */; };
+		2338DE1017AB7445001C0333 /* includes in Resources */ = {isa = PBXBuildFile; fileRef = 2338DE0D17AB7445001C0333 /* includes */; };
+		2373EFF1176A93B8008EC435 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2373EFF0176A93B8008EC435 /* Cocoa.framework */; };
+		2373EFFB176A93B8008EC435 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2373EFF9176A93B8008EC435 /* InfoPlist.strings */; };
+		2373F001176A93B8008EC435 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2373EFFF176A93B8008EC435 /* Credits.rtf */; };
+		23A0082917ACB72E0078B9FA /* SDL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2338DDD217AB73FF001C0333 /* SDL.framework */; };
+		23A0082A17ACB72E0078B9FA /* SDL_image.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2338DDD317AB73FF001C0333 /* SDL_image.framework */; };
+		23A0082B17ACB72E0078B9FA /* SDL_mixer.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2338DDD417AB73FF001C0333 /* SDL_mixer.framework */; };
+		23A0082C17ACB72E0078B9FA /* SDL_ttf.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2338DDD517AB73FF001C0333 /* SDL_ttf.framework */; };
+		23C844C217A63C3000257B84 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 23C844BD17A63C3000257B84 /* README */; };
+		23C844C317A63C3000257B84 /* SocketClasses.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23C844BE17A63C3000257B84 /* SocketClasses.cpp */; };
+		23C844C417A63C3000257B84 /* TypeSwitching.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23C844C017A63C3000257B84 /* TypeSwitching.cpp */; };
+		23C844C817A6431700257B84 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2373F015176A941C008EC435 /* main.mm */; };
+		23C844CE17A64A5D00257B84 /* ServerApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23C844CC17A64A5D00257B84 /* ServerApp.mm */; };
+		23C844D117A64A6400257B84 /* ClientApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23C844CF17A64A6400257B84 /* ClientApp.cpp */; };
+		23C844D617A652CC00257B84 /* ClientAppCommunicatorScreen.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23C844D417A652CC00257B84 /* ClientAppCommunicatorScreen.mm */; };
+		23E784E617A62E9600883DFC /* GUIImageFromScreenGrabber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23E784E417A62E9600883DFC /* GUIImageFromScreenGrabber.cpp */; };
+		23E784E917A636B800883DFC /* GUICommunicator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23E784E717A636B700883DFC /* GUICommunicator.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		23A0082817ACB7210078B9FA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				23A0082917ACB72E0078B9FA /* SDL.framework in CopyFiles */,
+				23A0082A17ACB72E0078B9FA /* SDL_image.framework in CopyFiles */,
+				23A0082B17ACB72E0078B9FA /* SDL_mixer.framework in CopyFiles */,
+				23A0082C17ACB72E0078B9FA /* SDL_ttf.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		23043E5217A6204100FC6466 /* AppleScriptLink.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppleScriptLink.mm; sourceTree = "<group>"; };
+		23043E5317A6204100FC6466 /* AppleScriptLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleScriptLink.h; sourceTree = "<group>"; };
+		23043E5517A627DE00FC6466 /* ScreenGrabber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenGrabber.h; sourceTree = "<group>"; };
+		23043E5617A627DE00FC6466 /* ScreenGrabber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenGrabber.m; sourceTree = "<group>"; };
+		2338DD5917AB73FF001C0333 /* Compatibility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Compatibility.cpp; sourceTree = "<group>"; };
+		2338DD5A17AB73FF001C0333 /* Compatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Compatibility.h; sourceTree = "<group>"; };
+		2338DD5B17AB73FF001C0333 /* GameDisplay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameDisplay.cpp; sourceTree = "<group>"; };
+		2338DD5C17AB73FF001C0333 /* GameDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameDisplay.h; sourceTree = "<group>"; };
+		2338DD5D17AB73FF001C0333 /* gui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gui.h; sourceTree = "<group>"; };
+		2338DD5E17AB73FF001C0333 /* GUIApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GUIApp.cpp; sourceTree = "<group>"; };
+		2338DD5F17AB73FF001C0333 /* GUIApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIApp.h; sourceTree = "<group>"; };
+		2338DD6017AB73FF001C0333 /* GUIAudio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GUIAudio.cpp; sourceTree = "<group>"; };
+		2338DD6117AB73FF001C0333 /* GUIAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIAudio.h; sourceTree = "<group>"; };
+		2338DD6217AB73FF001C0333 /* GUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIButton.h; sourceTree = "<group>"; };
+		2338DD6317AB73FF001C0333 /* GUIColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIColors.h; sourceTree = "<group>"; };
+		2338DD6417AB73FF001C0333 /* GUIController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GUIController.cpp; sourceTree = "<group>"; };
+		2338DD6517AB73FF001C0333 /* GUIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIController.h; sourceTree = "<group>"; };
+		2338DD6617AB73FF001C0333 /* GUIErrorHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIErrorHandling.h; sourceTree = "<group>"; };
+		2338DD6717AB73FF001C0333 /* GUIErrorHandling_Impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIErrorHandling_Impl.h; sourceTree = "<group>"; };
+		2338DD6A17AB73FF001C0333 /* GUIImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GUIImage.cpp; sourceTree = "<group>"; };
+		2338DD6B17AB73FF001C0333 /* GUIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIImage.h; sourceTree = "<group>"; };
+		2338DD6C17AB73FF001C0333 /* GUIImageCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GUIImageCache.cpp; sourceTree = "<group>"; };
+		2338DD6D17AB73FF001C0333 /* GUIImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIImageCache.h; sourceTree = "<group>"; };
+		2338DD8517AB73FF001C0333 /* GUIImageView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GUIImageView.cpp; sourceTree = "<group>"; };
+		2338DD8617AB73FF001C0333 /* GUIImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIImageView.h; sourceTree = "<group>"; };
+		2338DD8717AB73FF001C0333 /* GUILetter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GUILetter.cpp; sourceTree = "<group>"; };
+		2338DD8817AB73FF001C0333 /* GUILetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUILetter.h; sourceTree = "<group>"; };
+		2338DD8917AB73FF001C0333 /* GUIMsg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GUIMsg.cpp; sourceTree = "<group>"; };
+		2338DD8A17AB73FF001C0333 /* GUIMsg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIMsg.h; sourceTree = "<group>"; };
+		2338DD8B17AB73FF001C0333 /* GUIMsgNew.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GUIMsgNew.cpp; sourceTree = "<group>"; };
+		2338DD8C17AB73FF001C0333 /* GUIMsgNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIMsgNew.h; sourceTree = "<group>"; };
+		2338DD8D17AB73FF001C0333 /* GUIScrollView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GUIScrollView.cpp; sourceTree = "<group>"; };
+		2338DD8E17AB73FF001C0333 /* GUIScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIScrollView.h; sourceTree = "<group>"; };
+		2338DD8F17AB73FF001C0333 /* GUISpreadsheet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GUISpreadsheet.cpp; sourceTree = "<group>"; };
+		2338DD9017AB73FF001C0333 /* GUISpreadsheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUISpreadsheet.h; sourceTree = "<group>"; };
+		2338DD9117AB73FF001C0333 /* GUITextViews.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GUITextViews.cpp; sourceTree = "<group>"; };
+		2338DD9217AB73FF001C0333 /* GUITextViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUITextViews.h; sourceTree = "<group>"; };
+		2338DD9317AB73FF001C0333 /* GUITimer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GUITimer.cpp; sourceTree = "<group>"; };
+		2338DD9417AB73FF001C0333 /* GUITimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUITimer.h; sourceTree = "<group>"; };
+		2338DD9517AB73FF001C0333 /* GUIUtility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GUIUtility.cpp; sourceTree = "<group>"; };
+		2338DD9617AB73FF001C0333 /* GUIUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIUtility.h; sourceTree = "<group>"; };
+		2338DD9717AB73FF001C0333 /* GUIValBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GUIValBox.cpp; sourceTree = "<group>"; };
+		2338DD9817AB73FF001C0333 /* GUIValBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIValBox.h; sourceTree = "<group>"; };
+		2338DD9917AB73FF001C0333 /* GUIView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GUIView.cpp; sourceTree = "<group>"; };
+		2338DD9A17AB73FF001C0333 /* GUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIView.h; sourceTree = "<group>"; };
+		2338DD9B17AB73FF001C0333 /* GUIWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GUIWindow.cpp; sourceTree = "<group>"; };
+		2338DD9C17AB73FF001C0333 /* GUIWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIWindow.h; sourceTree = "<group>"; };
+		2338DDCB17AB73FF001C0333 /* Letter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Letter.cpp; sourceTree = "<group>"; };
+		2338DDCC17AB73FF001C0333 /* Letter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Letter.h; sourceTree = "<group>"; };
+		2338DDCE17AB73FF001C0333 /* NathanSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NathanSingleton.h; sourceTree = "<group>"; };
+		2338DDCF17AB73FF001C0333 /* NewNewGUITextView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NewNewGUITextView.cpp; sourceTree = "<group>"; };
+		2338DDD017AB73FF001C0333 /* NewNewGUITextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewNewGUITextView.h; sourceTree = "<group>"; };
+		2338DDD117AB73FF001C0333 /* Ptr_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ptr_config.h; sourceTree = "<group>"; };
+		2338DDD217AB73FF001C0333 /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL.framework; sourceTree = "<group>"; };
+		2338DDD317AB73FF001C0333 /* SDL_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL_image.framework; sourceTree = "<group>"; };
+		2338DDD417AB73FF001C0333 /* SDL_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL_mixer.framework; sourceTree = "<group>"; };
+		2338DDD517AB73FF001C0333 /* SDL_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL_ttf.framework; sourceTree = "<group>"; };
+		2338DDD617AB73FF001C0333 /* SDLMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLMain.h; sourceTree = "<group>"; };
+		2338DDD717AB73FF001C0333 /* SDLMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLMain.m; sourceTree = "<group>"; };
+		2338DE0B17AB7445001C0333 /* GUIFonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GUIFonts; sourceTree = "<group>"; };
+		2338DE0C17AB7445001C0333 /* GUIImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GUIImages; sourceTree = "<group>"; };
+		2338DE0D17AB7445001C0333 /* includes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = includes; sourceTree = "<group>"; };
+		2373EFEC176A93B8008EC435 /* MultiComputer Tester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MultiComputer Tester.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2373EFF0176A93B8008EC435 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		2373EFF8176A93B8008EC435 /* MultiComputer Tester-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MultiComputer Tester-Info.plist"; sourceTree = "<group>"; };
+		2373EFFA176A93B8008EC435 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2373EFFE176A93B8008EC435 /* MultiComputer Tester-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MultiComputer Tester-Prefix.pch"; sourceTree = "<group>"; };
+		2373F000176A93B8008EC435 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		2373F015176A941C008EC435 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		23C844BC17A63C3000257B84 /* NathanUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NathanUtility.h; sourceTree = "<group>"; };
+		23C844BD17A63C3000257B84 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		23C844BE17A63C3000257B84 /* SocketClasses.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SocketClasses.cpp; sourceTree = "<group>"; };
+		23C844BF17A63C3000257B84 /* SocketClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketClasses.h; sourceTree = "<group>"; };
+		23C844C017A63C3000257B84 /* TypeSwitching.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TypeSwitching.cpp; sourceTree = "<group>"; };
+		23C844C117A63C3000257B84 /* TypeSwitching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeSwitching.h; sourceTree = "<group>"; };
+		23C844C517A6427100257B84 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		23C844CC17A64A5D00257B84 /* ServerApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ServerApp.mm; sourceTree = "<group>"; };
+		23C844CD17A64A5D00257B84 /* ServerApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerApp.h; sourceTree = "<group>"; };
+		23C844CF17A64A6400257B84 /* ClientApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClientApp.cpp; sourceTree = "<group>"; };
+		23C844D017A64A6400257B84 /* ClientApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientApp.h; sourceTree = "<group>"; };
+		23C844D317A650B700257B84 /* sharedConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sharedConstants.h; sourceTree = "<group>"; };
+		23C844D417A652CC00257B84 /* ClientAppCommunicatorScreen.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ClientAppCommunicatorScreen.mm; sourceTree = "<group>"; };
+		23C844D517A652CC00257B84 /* ClientAppCommunicatorScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientAppCommunicatorScreen.h; sourceTree = "<group>"; };
+		23E784E417A62E9600883DFC /* GUIImageFromScreenGrabber.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GUIImageFromScreenGrabber.cpp; sourceTree = "<group>"; };
+		23E784E517A62E9600883DFC /* GUIImageFromScreenGrabber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIImageFromScreenGrabber.h; sourceTree = "<group>"; };
+		23E784E717A636B700883DFC /* GUICommunicator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GUICommunicator.cpp; sourceTree = "<group>"; };
+		23E784E817A636B700883DFC /* GUICommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUICommunicator.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2373EFE9176A93B8008EC435 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2373EFF1176A93B8008EC435 /* Cocoa.framework in Frameworks */,
+				2338DE0617AB73FF001C0333 /* SDL.framework in Frameworks */,
+				2338DE0717AB73FF001C0333 /* SDL_image.framework in Frameworks */,
+				2338DE0817AB73FF001C0333 /* SDL_mixer.framework in Frameworks */,
+				2338DE0917AB73FF001C0333 /* SDL_ttf.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2338DD5717AB73FF001C0333 /* gui */ = {
+			isa = PBXGroup;
+			children = (
+				2338DD5917AB73FF001C0333 /* Compatibility.cpp */,
+				2338DD5A17AB73FF001C0333 /* Compatibility.h */,
+				2338DD5B17AB73FF001C0333 /* GameDisplay.cpp */,
+				2338DD5C17AB73FF001C0333 /* GameDisplay.h */,
+				2338DD5D17AB73FF001C0333 /* gui.h */,
+				2338DD5E17AB73FF001C0333 /* GUIApp.cpp */,
+				2338DD5F17AB73FF001C0333 /* GUIApp.h */,
+				2338DD6017AB73FF001C0333 /* GUIAudio.cpp */,
+				2338DD6117AB73FF001C0333 /* GUIAudio.h */,
+				2338DD6217AB73FF001C0333 /* GUIButton.h */,
+				2338DD6317AB73FF001C0333 /* GUIColors.h */,
+				2338DD6417AB73FF001C0333 /* GUIController.cpp */,
+				2338DD6517AB73FF001C0333 /* GUIController.h */,
+				2338DD6617AB73FF001C0333 /* GUIErrorHandling.h */,
+				2338DD6717AB73FF001C0333 /* GUIErrorHandling_Impl.h */,
+				2338DD6A17AB73FF001C0333 /* GUIImage.cpp */,
+				2338DD6B17AB73FF001C0333 /* GUIImage.h */,
+				2338DD6C17AB73FF001C0333 /* GUIImageCache.cpp */,
+				2338DD6D17AB73FF001C0333 /* GUIImageCache.h */,
+				2338DD8517AB73FF001C0333 /* GUIImageView.cpp */,
+				2338DD8617AB73FF001C0333 /* GUIImageView.h */,
+				2338DD8717AB73FF001C0333 /* GUILetter.cpp */,
+				2338DD8817AB73FF001C0333 /* GUILetter.h */,
+				2338DD8917AB73FF001C0333 /* GUIMsg.cpp */,
+				2338DD8A17AB73FF001C0333 /* GUIMsg.h */,
+				2338DD8B17AB73FF001C0333 /* GUIMsgNew.cpp */,
+				2338DD8C17AB73FF001C0333 /* GUIMsgNew.h */,
+				2338DD8D17AB73FF001C0333 /* GUIScrollView.cpp */,
+				2338DD8E17AB73FF001C0333 /* GUIScrollView.h */,
+				2338DD8F17AB73FF001C0333 /* GUISpreadsheet.cpp */,
+				2338DD9017AB73FF001C0333 /* GUISpreadsheet.h */,
+				2338DD9117AB73FF001C0333 /* GUITextViews.cpp */,
+				2338DD9217AB73FF001C0333 /* GUITextViews.h */,
+				2338DD9317AB73FF001C0333 /* GUITimer.cpp */,
+				2338DD9417AB73FF001C0333 /* GUITimer.h */,
+				2338DD9517AB73FF001C0333 /* GUIUtility.cpp */,
+				2338DD9617AB73FF001C0333 /* GUIUtility.h */,
+				2338DD9717AB73FF001C0333 /* GUIValBox.cpp */,
+				2338DD9817AB73FF001C0333 /* GUIValBox.h */,
+				2338DD9917AB73FF001C0333 /* GUIView.cpp */,
+				2338DD9A17AB73FF001C0333 /* GUIView.h */,
+				2338DD9B17AB73FF001C0333 /* GUIWindow.cpp */,
+				2338DD9C17AB73FF001C0333 /* GUIWindow.h */,
+				2338DDCB17AB73FF001C0333 /* Letter.cpp */,
+				2338DDCC17AB73FF001C0333 /* Letter.h */,
+				2338DDCE17AB73FF001C0333 /* NathanSingleton.h */,
+				2338DDCF17AB73FF001C0333 /* NewNewGUITextView.cpp */,
+				2338DDD017AB73FF001C0333 /* NewNewGUITextView.h */,
+				2338DE0B17AB7445001C0333 /* GUIFonts */,
+				2338DE0C17AB7445001C0333 /* GUIImages */,
+				2338DE0D17AB7445001C0333 /* includes */,
+				2338DDD117AB73FF001C0333 /* Ptr_config.h */,
+				2338DDD217AB73FF001C0333 /* SDL.framework */,
+				2338DDD317AB73FF001C0333 /* SDL_image.framework */,
+				2338DDD417AB73FF001C0333 /* SDL_mixer.framework */,
+				2338DDD517AB73FF001C0333 /* SDL_ttf.framework */,
+				2338DDD617AB73FF001C0333 /* SDLMain.h */,
+				2338DDD717AB73FF001C0333 /* SDLMain.m */,
+			);
+			path = gui;
+			sourceTree = "<group>";
+		};
+		2373EFE1176A93B8008EC435 = {
+			isa = PBXGroup;
+			children = (
+				2373EFF6176A93B8008EC435 /* mctester */,
+				2373EFEF176A93B8008EC435 /* Frameworks */,
+				2373EFED176A93B8008EC435 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2373EFED176A93B8008EC435 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2373EFEC176A93B8008EC435 /* MultiComputer Tester.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2373EFEF176A93B8008EC435 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2373EFF0176A93B8008EC435 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2373EFF6176A93B8008EC435 /* mctester */ = {
+			isa = PBXGroup;
+			children = (
+				2373F015176A941C008EC435 /* main.mm */,
+				23C844D317A650B700257B84 /* sharedConstants.h */,
+				23C844D817A657D000257B84 /* Sever */,
+				23C844D717A657C700257B84 /* Client */,
+				23C844C517A6427100257B84 /* main.cpp */,
+				23043E5217A6204100FC6466 /* AppleScriptLink.mm */,
+				23043E5317A6204100FC6466 /* AppleScriptLink.h */,
+				23E784E417A62E9600883DFC /* GUIImageFromScreenGrabber.cpp */,
+				23E784E517A62E9600883DFC /* GUIImageFromScreenGrabber.h */,
+				23043E5517A627DE00FC6466 /* ScreenGrabber.h */,
+				23043E5617A627DE00FC6466 /* ScreenGrabber.m */,
+				23E784E717A636B700883DFC /* GUICommunicator.cpp */,
+				23E784E817A636B700883DFC /* GUICommunicator.h */,
+				2373EFF7176A93B8008EC435 /* Supporting Files */,
+			);
+			path = mctester;
+			sourceTree = "<group>";
+		};
+		2373EFF7176A93B8008EC435 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2373EFF8176A93B8008EC435 /* MultiComputer Tester-Info.plist */,
+				2373EFF9176A93B8008EC435 /* InfoPlist.strings */,
+				2338DD5717AB73FF001C0333 /* gui */,
+				2373EFFE176A93B8008EC435 /* MultiComputer Tester-Prefix.pch */,
+				2373EFFF176A93B8008EC435 /* Credits.rtf */,
+				23C844BB17A63C3000257B84 /* utility */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		23C844BB17A63C3000257B84 /* utility */ = {
+			isa = PBXGroup;
+			children = (
+				23C844BC17A63C3000257B84 /* NathanUtility.h */,
+				23C844BD17A63C3000257B84 /* README */,
+				23C844BE17A63C3000257B84 /* SocketClasses.cpp */,
+				23C844BF17A63C3000257B84 /* SocketClasses.h */,
+				23C844C017A63C3000257B84 /* TypeSwitching.cpp */,
+				23C844C117A63C3000257B84 /* TypeSwitching.h */,
+			);
+			path = utility;
+			sourceTree = "<group>";
+		};
+		23C844D717A657C700257B84 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				23C844CF17A64A6400257B84 /* ClientApp.cpp */,
+				23C844D017A64A6400257B84 /* ClientApp.h */,
+				23C844D417A652CC00257B84 /* ClientAppCommunicatorScreen.mm */,
+				23C844D517A652CC00257B84 /* ClientAppCommunicatorScreen.h */,
+			);
+			name = Client;
+			sourceTree = "<group>";
+		};
+		23C844D817A657D000257B84 /* Sever */ = {
+			isa = PBXGroup;
+			children = (
+				23C844CC17A64A5D00257B84 /* ServerApp.mm */,
+				23C844CD17A64A5D00257B84 /* ServerApp.h */,
+			);
+			name = Sever;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2373EFEB176A93B8008EC435 /* MultiComputer Tester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2373F00A176A93B8008EC435 /* Build configuration list for PBXNativeTarget "MultiComputer Tester" */;
+			buildPhases = (
+				2373EFE8176A93B8008EC435 /* Sources */,
+				2373EFE9176A93B8008EC435 /* Frameworks */,
+				2373EFEA176A93B8008EC435 /* Resources */,
+				23A0082817ACB7210078B9FA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MultiComputer Tester";
+			productName = doodles;
+			productReference = 2373EFEC176A93B8008EC435 /* MultiComputer Tester.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2373EFE3176A93B8008EC435 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Lions Entertainment";
+			};
+			buildConfigurationList = 2373EFE6176A93B8008EC435 /* Build configuration list for PBXProject "MultiComputer Tester" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2373EFE1176A93B8008EC435;
+			productRefGroup = 2373EFED176A93B8008EC435 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2373EFEB176A93B8008EC435 /* MultiComputer Tester */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2373EFEA176A93B8008EC435 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2373EFFB176A93B8008EC435 /* InfoPlist.strings in Resources */,
+				2373F001176A93B8008EC435 /* Credits.rtf in Resources */,
+				23C844C217A63C3000257B84 /* README in Resources */,
+				2338DE0E17AB7445001C0333 /* GUIFonts in Resources */,
+				2338DE0F17AB7445001C0333 /* GUIImages in Resources */,
+				2338DE1017AB7445001C0333 /* includes in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2373EFE8176A93B8008EC435 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23043E5417A6204100FC6466 /* AppleScriptLink.mm in Sources */,
+				23043E5717A627DE00FC6466 /* ScreenGrabber.m in Sources */,
+				23E784E617A62E9600883DFC /* GUIImageFromScreenGrabber.cpp in Sources */,
+				23E784E917A636B800883DFC /* GUICommunicator.cpp in Sources */,
+				23C844C317A63C3000257B84 /* SocketClasses.cpp in Sources */,
+				23C844C417A63C3000257B84 /* TypeSwitching.cpp in Sources */,
+				23C844C817A6431700257B84 /* main.mm in Sources */,
+				23C844CE17A64A5D00257B84 /* ServerApp.mm in Sources */,
+				23C844D117A64A6400257B84 /* ClientApp.cpp in Sources */,
+				23C844D617A652CC00257B84 /* ClientAppCommunicatorScreen.mm in Sources */,
+				2338DDD917AB73FF001C0333 /* Compatibility.cpp in Sources */,
+				2338DDDA17AB73FF001C0333 /* GameDisplay.cpp in Sources */,
+				2338DDDB17AB73FF001C0333 /* GUIApp.cpp in Sources */,
+				2338DDDC17AB73FF001C0333 /* GUIAudio.cpp in Sources */,
+				2338DDDD17AB73FF001C0333 /* GUIController.cpp in Sources */,
+				2338DDDF17AB73FF001C0333 /* GUIImage.cpp in Sources */,
+				2338DDE017AB73FF001C0333 /* GUIImageCache.cpp in Sources */,
+				2338DDF717AB73FF001C0333 /* GUIImageView.cpp in Sources */,
+				2338DDF817AB73FF001C0333 /* GUILetter.cpp in Sources */,
+				2338DDF917AB73FF001C0333 /* GUIMsg.cpp in Sources */,
+				2338DDFA17AB73FF001C0333 /* GUIMsgNew.cpp in Sources */,
+				2338DDFB17AB73FF001C0333 /* GUIScrollView.cpp in Sources */,
+				2338DDFC17AB73FF001C0333 /* GUISpreadsheet.cpp in Sources */,
+				2338DDFD17AB73FF001C0333 /* GUITextViews.cpp in Sources */,
+				2338DDFE17AB73FF001C0333 /* GUITimer.cpp in Sources */,
+				2338DDFF17AB73FF001C0333 /* GUIUtility.cpp in Sources */,
+				2338DE0017AB73FF001C0333 /* GUIValBox.cpp in Sources */,
+				2338DE0117AB73FF001C0333 /* GUIView.cpp in Sources */,
+				2338DE0217AB73FF001C0333 /* GUIWindow.cpp in Sources */,
+				2338DE0317AB73FF001C0333 /* Letter.cpp in Sources */,
+				2338DE0517AB73FF001C0333 /* NewNewGUITextView.cpp in Sources */,
+				2338DE0A17AB73FF001C0333 /* SDLMain.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2373EFF9176A93B8008EC435 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2373EFFA176A93B8008EC435 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2373EFFF176A93B8008EC435 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2373F000176A93B8008EC435 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2373F008176A93B8008EC435 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2373F009176A93B8008EC435 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2373F00B176A93B8008EC435 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/mctester/gui\"",
+					Frameworks,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mctester/MultiComputer Tester-Prefix.pch";
+				INFOPLIST_FILE = "mctester/MultiComputer Tester-Info.plist";
+				PRODUCT_NAME = "MultiComputer Tester";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2373F00C176A93B8008EC435 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/mctester/gui\"",
+					Frameworks,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mctester/MultiComputer Tester-Prefix.pch";
+				INFOPLIST_FILE = "mctester/MultiComputer Tester-Info.plist";
+				PRODUCT_NAME = "MultiComputer Tester";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2373EFE6176A93B8008EC435 /* Build configuration list for PBXProject "MultiComputer Tester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2373F008176A93B8008EC435 /* Debug */,
+				2373F009176A93B8008EC435 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2373F00A176A93B8008EC435 /* Build configuration list for PBXNativeTarget "MultiComputer Tester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2373F00B176A93B8008EC435 /* Debug */,
+				2373F00C176A93B8008EC435 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2373EFE3176A93B8008EC435 /* Project object */;
+}
