@@ -48,12 +48,10 @@
 		23C844C217A63C3000257B84 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 23C844BD17A63C3000257B84 /* README */; };
 		23C844C317A63C3000257B84 /* SocketClasses.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23C844BE17A63C3000257B84 /* SocketClasses.cpp */; };
 		23C844C417A63C3000257B84 /* TypeSwitching.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23C844C017A63C3000257B84 /* TypeSwitching.cpp */; };
-		23C844C817A6431700257B84 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2373F015176A941C008EC435 /* main.mm */; };
+		23C844C817A6431700257B84 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2373F015176A941C008EC435 /* main.cpp */; };
 		23C844CE17A64A5D00257B84 /* ServerApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23C844CC17A64A5D00257B84 /* ServerApp.mm */; };
 		23C844D117A64A6400257B84 /* ClientApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23C844CF17A64A6400257B84 /* ClientApp.cpp */; };
-		23C844D617A652CC00257B84 /* ClientAppCommunicatorScreen.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23C844D417A652CC00257B84 /* ClientAppCommunicatorScreen.mm */; };
-		23E784E617A62E9600883DFC /* GUIImageFromScreenGrabber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23E784E417A62E9600883DFC /* GUIImageFromScreenGrabber.cpp */; };
-		23E784E917A636B800883DFC /* GUICommunicator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23E784E717A636B700883DFC /* GUICommunicator.cpp */; };
+		23C844D617A652CC00257B84 /* ClientAppCommunicatorScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23C844D417A652CC00257B84 /* ClientAppCommunicatorScreen.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -135,31 +133,27 @@
 		2338DE0B17AB7445001C0333 /* GUIFonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GUIFonts; sourceTree = "<group>"; };
 		2338DE0C17AB7445001C0333 /* GUIImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GUIImages; sourceTree = "<group>"; };
 		2338DE0D17AB7445001C0333 /* includes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = includes; sourceTree = "<group>"; };
+		2342131F17ADCAA90045C4B4 /* example.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = example.cpp; sourceTree = "<group>"; };
 		2373EFEC176A93B8008EC435 /* MultiComputer Tester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MultiComputer Tester.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2373EFF0176A93B8008EC435 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		2373EFF8176A93B8008EC435 /* MultiComputer Tester-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MultiComputer Tester-Info.plist"; sourceTree = "<group>"; };
 		2373EFFA176A93B8008EC435 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2373EFFE176A93B8008EC435 /* MultiComputer Tester-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MultiComputer Tester-Prefix.pch"; sourceTree = "<group>"; };
 		2373F000176A93B8008EC435 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		2373F015176A941C008EC435 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		2373F015176A941C008EC435 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		23C844BC17A63C3000257B84 /* NathanUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NathanUtility.h; sourceTree = "<group>"; };
 		23C844BD17A63C3000257B84 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		23C844BE17A63C3000257B84 /* SocketClasses.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SocketClasses.cpp; sourceTree = "<group>"; };
 		23C844BF17A63C3000257B84 /* SocketClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketClasses.h; sourceTree = "<group>"; };
 		23C844C017A63C3000257B84 /* TypeSwitching.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TypeSwitching.cpp; sourceTree = "<group>"; };
 		23C844C117A63C3000257B84 /* TypeSwitching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeSwitching.h; sourceTree = "<group>"; };
-		23C844C517A6427100257B84 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		23C844CC17A64A5D00257B84 /* ServerApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ServerApp.mm; sourceTree = "<group>"; };
 		23C844CD17A64A5D00257B84 /* ServerApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerApp.h; sourceTree = "<group>"; };
 		23C844CF17A64A6400257B84 /* ClientApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClientApp.cpp; sourceTree = "<group>"; };
 		23C844D017A64A6400257B84 /* ClientApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientApp.h; sourceTree = "<group>"; };
 		23C844D317A650B700257B84 /* sharedConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sharedConstants.h; sourceTree = "<group>"; };
-		23C844D417A652CC00257B84 /* ClientAppCommunicatorScreen.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ClientAppCommunicatorScreen.mm; sourceTree = "<group>"; };
+		23C844D417A652CC00257B84 /* ClientAppCommunicatorScreen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClientAppCommunicatorScreen.cpp; sourceTree = "<group>"; };
 		23C844D517A652CC00257B84 /* ClientAppCommunicatorScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientAppCommunicatorScreen.h; sourceTree = "<group>"; };
-		23E784E417A62E9600883DFC /* GUIImageFromScreenGrabber.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GUIImageFromScreenGrabber.cpp; sourceTree = "<group>"; };
-		23E784E517A62E9600883DFC /* GUIImageFromScreenGrabber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUIImageFromScreenGrabber.h; sourceTree = "<group>"; };
-		23E784E717A636B700883DFC /* GUICommunicator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GUICommunicator.cpp; sourceTree = "<group>"; };
-		23E784E817A636B700883DFC /* GUICommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUICommunicator.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,19 +265,11 @@
 		2373EFF6176A93B8008EC435 /* mctester */ = {
 			isa = PBXGroup;
 			children = (
-				2373F015176A941C008EC435 /* main.mm */,
+				2373F015176A941C008EC435 /* main.cpp */,
 				23C844D317A650B700257B84 /* sharedConstants.h */,
 				23C844D817A657D000257B84 /* Sever */,
 				23C844D717A657C700257B84 /* Client */,
-				23C844C517A6427100257B84 /* main.cpp */,
-				23043E5217A6204100FC6466 /* AppleScriptLink.mm */,
-				23043E5317A6204100FC6466 /* AppleScriptLink.h */,
-				23E784E417A62E9600883DFC /* GUIImageFromScreenGrabber.cpp */,
-				23E784E517A62E9600883DFC /* GUIImageFromScreenGrabber.h */,
-				23043E5517A627DE00FC6466 /* ScreenGrabber.h */,
-				23043E5617A627DE00FC6466 /* ScreenGrabber.m */,
-				23E784E717A636B700883DFC /* GUICommunicator.cpp */,
-				23E784E817A636B700883DFC /* GUICommunicator.h */,
+				2342131F17ADCAA90045C4B4 /* example.cpp */,
 				2373EFF7176A93B8008EC435 /* Supporting Files */,
 			);
 			path = mctester;
@@ -320,7 +306,7 @@
 			children = (
 				23C844CF17A64A6400257B84 /* ClientApp.cpp */,
 				23C844D017A64A6400257B84 /* ClientApp.h */,
-				23C844D417A652CC00257B84 /* ClientAppCommunicatorScreen.mm */,
+				23C844D417A652CC00257B84 /* ClientAppCommunicatorScreen.cpp */,
 				23C844D517A652CC00257B84 /* ClientAppCommunicatorScreen.h */,
 			);
 			name = Client;
@@ -331,6 +317,10 @@
 			children = (
 				23C844CC17A64A5D00257B84 /* ServerApp.mm */,
 				23C844CD17A64A5D00257B84 /* ServerApp.h */,
+				23043E5217A6204100FC6466 /* AppleScriptLink.mm */,
+				23043E5317A6204100FC6466 /* AppleScriptLink.h */,
+				23043E5517A627DE00FC6466 /* ScreenGrabber.h */,
+				23043E5617A627DE00FC6466 /* ScreenGrabber.m */,
 			);
 			name = Sever;
 			sourceTree = "<group>";
@@ -405,14 +395,12 @@
 			files = (
 				23043E5417A6204100FC6466 /* AppleScriptLink.mm in Sources */,
 				23043E5717A627DE00FC6466 /* ScreenGrabber.m in Sources */,
-				23E784E617A62E9600883DFC /* GUIImageFromScreenGrabber.cpp in Sources */,
-				23E784E917A636B800883DFC /* GUICommunicator.cpp in Sources */,
 				23C844C317A63C3000257B84 /* SocketClasses.cpp in Sources */,
 				23C844C417A63C3000257B84 /* TypeSwitching.cpp in Sources */,
-				23C844C817A6431700257B84 /* main.mm in Sources */,
+				23C844C817A6431700257B84 /* main.cpp in Sources */,
 				23C844CE17A64A5D00257B84 /* ServerApp.mm in Sources */,
 				23C844D117A64A6400257B84 /* ClientApp.cpp in Sources */,
-				23C844D617A652CC00257B84 /* ClientAppCommunicatorScreen.mm in Sources */,
+				23C844D617A652CC00257B84 /* ClientAppCommunicatorScreen.cpp in Sources */,
 				2338DDD917AB73FF001C0333 /* Compatibility.cpp in Sources */,
 				2338DDDA17AB73FF001C0333 /* GameDisplay.cpp in Sources */,
 				2338DDDB17AB73FF001C0333 /* GUIApp.cpp in Sources */,

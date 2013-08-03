@@ -1,46 +1,120 @@
-#include <ApplicationServices/ApplicationServices.h>
-#include <unistd.h>
-#include "SDL/SDL.h"
 
-int main(int argc, char **argv) {
-    // Move to 200x200
-    CGEventRef move1 = CGEventCreateMouseEvent(
-                                               NULL, kCGEventMouseMoved,
-                                               CGPointMake(200, 200),
-                                               kCGMouseButtonLeft // ignored
-                                               );
-    // Move to 250x250
-    CGEventRef move2 = CGEventCreateMouseEvent(
-                                               NULL, kCGEventMouseMoved,
-                                               CGPointMake(250, 250),
-                                               kCGMouseButtonLeft // ignored
-                                               );
-    // Left button down at 250x250
-    CGEventRef click1_down = CGEventCreateMouseEvent(
-                                                     NULL, kCGEventLeftMouseDown,
-                                                     CGPointMake(250, 250),
-                                                     kCGMouseButtonLeft
-                                                     );
-    // Left button up at 250x250
-    CGEventRef click1_up = CGEventCreateMouseEvent(
-                                                   NULL, kCGEventLeftMouseUp,
-                                                   CGPointMake(250, 250),
-                                                   kCGMouseButtonLeft
-                                                   );
+#include "SDL/SDL.h"
+#include "gui/GUIApp.h"
+#include "gui/GUIWindow.h"
+#include "gui/GUIImageView.h"
+#include "gui/GUIButton.h"
+#include "gui/GUITextViews.h"
+#include "gui/GUIMsg.h"
+
+#include "ServerApp.h"
+#include "ClientApp.h"
+
+#include "utility/SocketClasses.h"
+
+
+#include <iostream>
+using namespace std;
+using namespace GUI;
+
+template <typename T>
+void printError(const T &e) {
     
-    // Now, execute these events with an interval to make them noticeable
-    CGEventPost(kCGHIDEventTap, move1);
-    sleep(1);
-    CGEventPost(kCGHIDEventTap, move2);
-    sleep(1);
-    CGEventPost(kCGHIDEventTap, click1_down);
-    CGEventPost(kCGHIDEventTap, click1_up);
+//    Msg error_msg(300, 80, e.msg);
+//    
+//    error_msg.pop_up(1500);
+
+    cout << e.msg << endl;
+}
+
+struct StartScreen : public GUI::View {
+public:
     
-    // Release the events
-    CFRelease(click1_up);
-    CFRelease(click1_down);
-    CFRelease(move2);
-    CFRelease(move1);
+    StartScreen(Window &window);
+    
+    TextBox *textbox;
+    Button *serverStart;
+    Button *clientStart;
+    
+};
+
+struct ServerStart {
+    
+    ServerStart(Window &win, StartScreen *screen)
+    : window(win), start_screen(screen)
+    { }
+    
+    void operator() () {
+        window.remove_subview(start_screen);
+        window.attach_subview(new ServerApp(start_screen->textbox->get_text()),
+                              DispPoint());
+    }
+    
+    Window &window;
+    StartScreen *start_screen;
+};
+struct ClientStart {
+    
+    ClientStart(Window &win, StartScreen *screen)
+    : window(win), start_screen(screen)
+    { }
+    
+    void operator() () {
+        window.remove_subview(start_screen);
+        window.attach_subview(new ClientApp(), DispPoint());
+    }
+    
+    Window &window;
+    StartScreen *start_screen;
+};
+
+StartScreen::StartScreen(Window &window)
+: View (600, 400), textbox(new TextBox(200, 20)),
+serverStart(create_button(ServerStart(window, this), "Server Start")),
+clientStart(create_button(ClientStart(window, this), "Client Start"))
+{
+    fill_with_color(Light_Gray_Color);
+
+#ifdef __APPLE__ // Only allow macs to be servers right now.
+    //    attach_subview(textbox, DispPoint(50, 100));
+    //    attach_subview(serverStart, DispPoint(300, 100));
+#endif
+
+    attach_subview(clientStart, DispPoint(300, 200));
+    
+}
+
+
+int main (int argc, char ** argv) {
+    
+    initGUI();
+
+    string app = "Game Maker for Mac";
+
+    try {
+        App::get()->register_exception_handler<SocketError>(&printError<SocketError>);
+        
+        Window win(600, 400);
+//        View *view(new GUICommunicator(GUIImage("screensh.bmp"), app));
+        
+        
+        
+//        win.attach_subview(new ServerApp(app), DispPoint());
+//        win.attach_subview(new ClientApp(), DispPoint());
+        win.attach_subview(new StartScreen(win), DispPoint());
+
+        App::get()->set_framerate_cap(60);
+        App::get()->run(&win);
+    }
+    catch (const GUIError &e) {
+        cout << e.msg << endl;
+    }
     
     return 0;
 }
+
+
+
+
+
+
