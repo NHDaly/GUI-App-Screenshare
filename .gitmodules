@@ -1,8 +1,14 @@
-[submodule "gui"]
-	path = gui
+[submodule "mctesters/gui"]
+	path = mctesters/gui
 	url = git@github.com:NHDaly/SDL-GUI-Library.git
 
-[submodule "utility"]
-	path = utility
+[submodule "mctesters/utility"]
+	path = mctesters/utility
 	url = /Users/Daly/Documents/School/EECS/Labs/GitHub/NathanUtility
 
+[submodule "mctester/gui"]
+	path = mctester/gui
+	url = git@github.com:NHDaly/SDL-GUI-Library.git
+[submodule "mctester/utility"]
+	path = mctester/utility
+	url = /Users/Daly/repos/NathanUtility.git
