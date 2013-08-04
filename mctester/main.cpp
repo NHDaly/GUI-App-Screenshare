@@ -7,7 +7,7 @@
 #include "gui/GUITextViews.h"
 #include "gui/GUIMsg.h"
 
-#include "ServerApp.h"
+#include "MacServerApp.h"
 #include "ClientApp.h"
 
 #include "utility/SocketClasses.h"
@@ -46,8 +46,14 @@ struct ServerStart {
     
     void operator() () {
         window.remove_subview(start_screen);
-        window.attach_subview(new ServerApp(start_screen->textbox->get_text()),
-                              DispPoint());
+
+        ServerApp *server;
+#ifdef __APPLE__ 
+        server = new MacServerApp(start_screen->textbox->get_text());
+#else
+        server = new WindowsServerApp(start_screen->textbox->get_text());
+#endif
+        window.attach_subview(server, DispPoint());
     }
     
     Window &window;
@@ -76,8 +82,8 @@ clientStart(create_button(ClientStart(window, this), "Client Start"))
     fill_with_color(Light_Gray_Color);
 
 #ifdef __APPLE__ // Only allow macs to be servers right now.
-    //    attach_subview(textbox, DispPoint(50, 100));
-    //    attach_subview(serverStart, DispPoint(300, 100));
+    attach_subview(textbox, DispPoint(50, 100));
+    attach_subview(serverStart, DispPoint(300, 100));
 #endif
 
     attach_subview(clientStart, DispPoint(300, 200));

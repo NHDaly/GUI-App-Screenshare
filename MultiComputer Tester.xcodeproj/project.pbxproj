@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		23043E5417A6204100FC6466 /* AppleScriptLink.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23043E5217A6204100FC6466 /* AppleScriptLink.mm */; };
 		23043E5717A627DE00FC6466 /* ScreenGrabber.m in Sources */ = {isa = PBXBuildFile; fileRef = 23043E5617A627DE00FC6466 /* ScreenGrabber.m */; };
+		233511E417ADD98C003B256A /* MacServerApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 233511E217ADD98B003B256A /* MacServerApp.mm */; };
 		2338DDD917AB73FF001C0333 /* Compatibility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2338DD5917AB73FF001C0333 /* Compatibility.cpp */; };
 		2338DDDA17AB73FF001C0333 /* GameDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2338DD5B17AB73FF001C0333 /* GameDisplay.cpp */; };
 		2338DDDB17AB73FF001C0333 /* GUIApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2338DD5E17AB73FF001C0333 /* GUIApp.cpp */; };
@@ -75,6 +76,8 @@
 		23043E5317A6204100FC6466 /* AppleScriptLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleScriptLink.h; sourceTree = "<group>"; };
 		23043E5517A627DE00FC6466 /* ScreenGrabber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenGrabber.h; sourceTree = "<group>"; };
 		23043E5617A627DE00FC6466 /* ScreenGrabber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenGrabber.m; sourceTree = "<group>"; };
+		233511E217ADD98B003B256A /* MacServerApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MacServerApp.mm; sourceTree = "<group>"; };
+		233511E317ADD98B003B256A /* MacServerApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacServerApp.h; sourceTree = "<group>"; };
 		2338DD5917AB73FF001C0333 /* Compatibility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Compatibility.cpp; sourceTree = "<group>"; };
 		2338DD5A17AB73FF001C0333 /* Compatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Compatibility.h; sourceTree = "<group>"; };
 		2338DD5B17AB73FF001C0333 /* GameDisplay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameDisplay.cpp; sourceTree = "<group>"; };
@@ -172,6 +175,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		233511DD17ADD70D003B256A /* Mac Server */ = {
+			isa = PBXGroup;
+			children = (
+				23C844CC17A64A5D00257B84 /* ServerApp.mm */,
+				233511E317ADD98B003B256A /* MacServerApp.h */,
+				233511E217ADD98B003B256A /* MacServerApp.mm */,
+				23043E5317A6204100FC6466 /* AppleScriptLink.h */,
+				23043E5217A6204100FC6466 /* AppleScriptLink.mm */,
+				23043E5517A627DE00FC6466 /* ScreenGrabber.h */,
+				23043E5617A627DE00FC6466 /* ScreenGrabber.m */,
+			);
+			name = "Mac Server";
+			sourceTree = "<group>";
+		};
+		233511DE17ADD714003B256A /* Windows Server */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Windows Server";
+			sourceTree = "<group>";
+		};
 		2338DD5717AB73FF001C0333 /* gui */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,12 +339,9 @@
 		23C844D817A657D000257B84 /* Sever */ = {
 			isa = PBXGroup;
 			children = (
-				23C844CC17A64A5D00257B84 /* ServerApp.mm */,
 				23C844CD17A64A5D00257B84 /* ServerApp.h */,
-				23043E5217A6204100FC6466 /* AppleScriptLink.mm */,
-				23043E5317A6204100FC6466 /* AppleScriptLink.h */,
-				23043E5517A627DE00FC6466 /* ScreenGrabber.h */,
-				23043E5617A627DE00FC6466 /* ScreenGrabber.m */,
+				233511DE17ADD714003B256A /* Windows Server */,
+				233511DD17ADD70D003B256A /* Mac Server */,
 			);
 			name = Sever;
 			sourceTree = "<group>";
@@ -423,6 +444,7 @@
 				2338DE0317AB73FF001C0333 /* Letter.cpp in Sources */,
 				2338DE0517AB73FF001C0333 /* NewNewGUITextView.cpp in Sources */,
 				2338DE0A17AB73FF001C0333 /* SDLMain.m in Sources */,
+				233511E417ADD98C003B256A /* MacServerApp.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

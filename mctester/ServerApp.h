@@ -21,7 +21,7 @@ class ServerApp : public GUI::View {
 public:
     ServerApp(const std::string &appname);
     
-private:
+protected:
     
     std::string appname;
     Socket_Server *serv;
@@ -41,31 +41,29 @@ private:
 
     
     
-    
-    void send_image_to_client();
-    
-    void poll_client();
-
+    virtual void send_image_to_client() = 0; // OS dependent
     
     // Receive from client and send to watched app:
     
     // Mouse Events. Following three functions all work the same:
     //  Return true if the mouse-event is finished being handled, false otherwise.
-    bool receive_mouse_down(DispPoint coord);
-    bool receive_mouse_up(DispPoint coord);
-    bool receive_mouse_motion(DispPoint coord, DispPoint rel_motion);
+    virtual bool receive_mouse_down(DispPoint coord) = 0;
+    virtual bool receive_mouse_up(DispPoint coord) = 0;
+    virtual bool receive_mouse_motion(DispPoint coord, DispPoint rel_motion) = 0;
     
     //  up == true, down == false.
-    bool receive_mouse_scroll_start(bool up_down);
-    bool receive_mouse_scroll_stop(bool up_down);
-    
-    
+    virtual bool receive_mouse_scroll_start(bool up_down) = 0;
+    virtual bool receive_mouse_scroll_stop(bool up_down) = 0;
     
     
     // Key Events. Following two functions all work the same:
     //  Return true if the key-event is finished being handled, false otherwise.
-    bool receive_key_down(SDL_keysym key);
-    bool receive_key_up(SDL_keysym key);
+    virtual bool receive_key_down(SDL_keysym key) = 0;
+    virtual bool receive_key_up(SDL_keysym key) = 0;
+
+private:
+    
+    void poll_client();
 
 };
 
