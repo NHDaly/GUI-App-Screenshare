@@ -63,12 +63,13 @@ cmd_sock(0), data_sock(port_num_k+1), appname(appname_)
 void ServerApp::poll_client()
 {
     
-    Uint8 eventType = 0; // get event from client
+    Uint8 eventType = 0; // get event-type from client
     
+    // check for events. if events, receive them.
     short revents;
     if (cmd_sock->poll(POLLIN, revents, 1)) {
         
-        cmd_sock->recv_into(&eventType);
+        cmd_sock->recv_into(&eventType);    // receive an SDL event type
         
         switch (eventType) {
                 

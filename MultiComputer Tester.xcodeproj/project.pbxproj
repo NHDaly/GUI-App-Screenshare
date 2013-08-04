@@ -137,6 +137,8 @@
 		2338DE0C17AB7445001C0333 /* GUIImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GUIImages; sourceTree = "<group>"; };
 		2338DE0D17AB7445001C0333 /* includes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = includes; sourceTree = "<group>"; };
 		2342131F17ADCAA90045C4B4 /* example.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = example.cpp; sourceTree = "<group>"; };
+		23672E7717AE14600052DF57 /* WindowsServerApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WindowsServerApp.cpp; sourceTree = "<group>"; };
+		23672E7817AE14600052DF57 /* WindowsServerApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WindowsServerApp.h; sourceTree = "<group>"; };
 		2373EFEC176A93B8008EC435 /* MultiComputer Tester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MultiComputer Tester.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2373EFF0176A93B8008EC435 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		2373EFF8176A93B8008EC435 /* MultiComputer Tester-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MultiComputer Tester-Info.plist"; sourceTree = "<group>"; };
@@ -192,6 +194,8 @@
 		233511DE17ADD714003B256A /* Windows Server */ = {
 			isa = PBXGroup;
 			children = (
+				23672E7717AE14600052DF57 /* WindowsServerApp.cpp */,
+				23672E7817AE14600052DF57 /* WindowsServerApp.h */,
 			);
 			name = "Windows Server";
 			sourceTree = "<group>";

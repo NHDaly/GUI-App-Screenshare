@@ -63,6 +63,7 @@ protected:
 
 private:
     
+    // template method to poll for, receive, and handle events from client.
     void poll_client();
 
 };
