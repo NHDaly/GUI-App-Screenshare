@@ -46,11 +46,11 @@
 		23A0082A17ACB72E0078B9FA /* SDL_image.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2338DDD317AB73FF001C0333 /* SDL_image.framework */; };
 		23A0082B17ACB72E0078B9FA /* SDL_mixer.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2338DDD417AB73FF001C0333 /* SDL_mixer.framework */; };
 		23A0082C17ACB72E0078B9FA /* SDL_ttf.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2338DDD517AB73FF001C0333 /* SDL_ttf.framework */; };
+		23C2691517AE3542001DEC54 /* ServerApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23C2691417AE3542001DEC54 /* ServerApp.cpp */; };
 		23C844C217A63C3000257B84 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 23C844BD17A63C3000257B84 /* README */; };
 		23C844C317A63C3000257B84 /* SocketClasses.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23C844BE17A63C3000257B84 /* SocketClasses.cpp */; };
 		23C844C417A63C3000257B84 /* TypeSwitching.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23C844C017A63C3000257B84 /* TypeSwitching.cpp */; };
 		23C844C817A6431700257B84 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2373F015176A941C008EC435 /* main.cpp */; };
-		23C844CE17A64A5D00257B84 /* ServerApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23C844CC17A64A5D00257B84 /* ServerApp.mm */; };
 		23C844D117A64A6400257B84 /* ClientApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23C844CF17A64A6400257B84 /* ClientApp.cpp */; };
 		23C844D617A652CC00257B84 /* ClientAppCommunicatorScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23C844D417A652CC00257B84 /* ClientAppCommunicatorScreen.cpp */; };
 /* End PBXBuildFile section */
@@ -146,13 +146,13 @@
 		2373EFFE176A93B8008EC435 /* MultiComputer Tester-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MultiComputer Tester-Prefix.pch"; sourceTree = "<group>"; };
 		2373F000176A93B8008EC435 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		2373F015176A941C008EC435 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		23C2691417AE3542001DEC54 /* ServerApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ServerApp.cpp; sourceTree = "<group>"; };
 		23C844BC17A63C3000257B84 /* NathanUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NathanUtility.h; sourceTree = "<group>"; };
 		23C844BD17A63C3000257B84 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		23C844BE17A63C3000257B84 /* SocketClasses.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SocketClasses.cpp; sourceTree = "<group>"; };
 		23C844BF17A63C3000257B84 /* SocketClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketClasses.h; sourceTree = "<group>"; };
 		23C844C017A63C3000257B84 /* TypeSwitching.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TypeSwitching.cpp; sourceTree = "<group>"; };
 		23C844C117A63C3000257B84 /* TypeSwitching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeSwitching.h; sourceTree = "<group>"; };
-		23C844CC17A64A5D00257B84 /* ServerApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ServerApp.mm; sourceTree = "<group>"; };
 		23C844CD17A64A5D00257B84 /* ServerApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerApp.h; sourceTree = "<group>"; };
 		23C844CF17A64A6400257B84 /* ClientApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClientApp.cpp; sourceTree = "<group>"; };
 		23C844D017A64A6400257B84 /* ClientApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientApp.h; sourceTree = "<group>"; };
@@ -180,7 +180,6 @@
 		233511DD17ADD70D003B256A /* Mac Server */ = {
 			isa = PBXGroup;
 			children = (
-				23C844CC17A64A5D00257B84 /* ServerApp.mm */,
 				233511E317ADD98B003B256A /* MacServerApp.h */,
 				233511E217ADD98B003B256A /* MacServerApp.mm */,
 				23043E5317A6204100FC6466 /* AppleScriptLink.h */,
@@ -344,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				23C844CD17A64A5D00257B84 /* ServerApp.h */,
+				23C2691417AE3542001DEC54 /* ServerApp.cpp */,
 				233511DE17ADD714003B256A /* Windows Server */,
 				233511DD17ADD70D003B256A /* Mac Server */,
 			);
@@ -423,7 +423,6 @@
 				23C844C317A63C3000257B84 /* SocketClasses.cpp in Sources */,
 				23C844C417A63C3000257B84 /* TypeSwitching.cpp in Sources */,
 				23C844C817A6431700257B84 /* main.cpp in Sources */,
-				23C844CE17A64A5D00257B84 /* ServerApp.mm in Sources */,
 				23C844D117A64A6400257B84 /* ClientApp.cpp in Sources */,
 				23C844D617A652CC00257B84 /* ClientAppCommunicatorScreen.cpp in Sources */,
 				2338DDD917AB73FF001C0333 /* Compatibility.cpp in Sources */,
@@ -449,6 +448,7 @@
 				2338DE0517AB73FF001C0333 /* NewNewGUITextView.cpp in Sources */,
 				2338DE0A17AB73FF001C0333 /* SDLMain.m in Sources */,
 				233511E417ADD98C003B256A /* MacServerApp.mm in Sources */,
+				23C2691517AE3542001DEC54 /* ServerApp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

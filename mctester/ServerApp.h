@@ -26,7 +26,7 @@ protected:
     std::string appname;
     Socket_Server *serv;
     Socket_Server *cmd_sock;
-    UDP_Socket data_sock;
+//    UDP_Socket data_sock;
     
     
     // Maybe it would be faster to spawn 4 threads and split the image up

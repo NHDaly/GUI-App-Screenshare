@@ -23,9 +23,11 @@ using namespace std::tr1;
 
 ServerApp::ServerApp(const string &appname_)
 :View(400,200), serv(new Socket_Server(port_num_k)),
-cmd_sock(0), data_sock(port_num_k+1), appname(appname_)
+cmd_sock(0),
+//data_sock(port_num_k+1),
+appname(appname_)
 {
-    data_sock.bind();
+//    data_sock.bind();
     
     fill_with_color(Gray_Color);
 

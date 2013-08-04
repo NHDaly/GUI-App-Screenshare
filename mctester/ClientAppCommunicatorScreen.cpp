@@ -25,8 +25,9 @@ using namespace std::tr1;
 
 //ClientAppCommunicatorScreen::ClientAppCommunicatorScreen(Socket_Client *sock_)
 ClientAppCommunicatorScreen::ClientAppCommunicatorScreen(Socket_Client *cmd_sock_, UDP_Socket data_sock_)
-:View(1,1), cmd_sock(cmd_sock_), data_sock(data_sock_)
-{    
+:View(1,1), cmd_sock(cmd_sock_)
+//, data_sock(data_sock_)
+{
     capture_focus();
     
     App::get()->repeat_on_timer(bind(&ClientAppCommunicatorScreen::poll_server_for_image,

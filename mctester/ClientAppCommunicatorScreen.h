@@ -21,7 +21,7 @@ public:
 private:
     
     Socket_Client *cmd_sock;
-    UDP_Socket data_sock;
+//    UDP_Socket data_sock;
     
     // Get image from server
     
