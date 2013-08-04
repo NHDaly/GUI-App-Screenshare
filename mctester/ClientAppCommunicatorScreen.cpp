@@ -14,7 +14,7 @@
 
 #include "gui/GUIApp.h"
 #include "gui/GUIWindow.h"
-#include "Compatibility.h"
+#include "gui/Compatibility.h"
 
 #include TR1_FUNCTIONAL_H
 #include <iostream>
