@@ -46,11 +46,11 @@ struct ServerStart {
     void operator() () {
         window.remove_subview(start_screen);
 
-        ServerApp *server;
+        ServerApp *server = 0;
 #ifdef __APPLE__ 
         server = new MacServerApp(start_screen->textbox->get_text());
 #else
-        server = new WindowsServerApp(start_screen->textbox->get_text());
+        //server = new WindowsServerApp(start_screen->textbox->get_text());
 #endif
         window.attach_subview(server, DispPoint());
     }
@@ -97,7 +97,8 @@ int main (int argc, char ** argv) {
     string app = "Game Maker for Mac";
 
     try {
-        App::get()->register_exception_handler<SocketError>(&printError<SocketError>);
+		typedef void(*SocketErorFuncPtr_t)(const SocketError&);
+        App::get()->register_exception_handler<SocketError>((SocketErorFuncPtr_t)&printError<SocketError>);
         
         Window win(600, 400);
 //        View *view(new GUICommunicator(GUIImage("screensh.bmp"), app));
