@@ -14,10 +14,13 @@
 
 #include "gui/GUIApp.h"
 #include "gui/GUIWindow.h"
+#include "Compatibility.h"
 
+#include TR1_FUNCTIONAL_H
 #include <iostream>
 using namespace GUI;
 using namespace std;
+using namespace std::tr1;
 
 
 //ClientAppCommunicatorScreen::ClientAppCommunicatorScreen(Socket_Client *sock_)
