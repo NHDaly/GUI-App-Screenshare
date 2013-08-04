@@ -1,5 +1,4 @@
 
-#include "SDL/SDL.h"
 #include "gui/GUIApp.h"
 #include "gui/GUIWindow.h"
 #include "gui/GUIImageView.h"

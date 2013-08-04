@@ -9,7 +9,9 @@
 #ifndef MultiComputer_Tester_sharedConstants_h
 #define MultiComputer_Tester_sharedConstants_h
 
-#include "SDL/SDL.h"
+#include "gui/Compatibility.h"
+#include SDL_SDLEVENTS_H
+
 
 
 const int GUI_MOUSESCROLL_START = SDL_USEREVENT;

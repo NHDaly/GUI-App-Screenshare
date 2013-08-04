@@ -14,8 +14,9 @@
 
 #include "gui/GUIApp.h"
 #include "gui/GUIWindow.h"
+#include "gui/Compatibility.h"
 
-#include <tr1/functional>
+#include TR1_FUNCTIONAL_H
 
 using namespace GUI;
 using namespace std;

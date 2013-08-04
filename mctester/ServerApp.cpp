@@ -12,14 +12,9 @@
 #include "gui/GUIApp.h"
 #include "gui/GUIWindow.h"
 #include "utility/SocketClasses.h"
+#include "gui/Compatibility.h"
 
-
-#include <ApplicationServices/ApplicationServices.h>
-#include <unistd.h>
-#include <arpa/inet.h>
-#include <Carbon/Carbon.h>
-
-#include <tr1/functional>
+#include TR1_FUNCTIONAL_H
 
 using namespace std;
 using namespace GUI;
