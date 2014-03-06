@@ -131,8 +131,9 @@ int main (int argc, char ** argv) {
 void reset_after_disconnection(const SocketError &) {
     Window *win = App::get()->get_window();
     delete win->remove_last_subview();
-    win->attach_subview(new StartScreen(*win), DispPoint());
-    win->resize(win->get_main_view()->get_w(), win->get_main_view()->get_h());
+    View *start = new StartScreen(*win);
+    win->attach_subview(start, DispPoint());
+    win->resize(start->get_w(), start->get_h());
     
 }
 

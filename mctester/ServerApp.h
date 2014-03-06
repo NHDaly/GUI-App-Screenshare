@@ -16,11 +16,13 @@
 #include <string>
 
 class Socket_Server;
-
+namespace GUI {
+    class GUITimer_command;
+}
 class ServerApp : public GUI::View {
 public:
     ServerApp(const std::string &appname);
-//    ~ServerApp();
+    ~ServerApp();
     
 protected:
     
@@ -29,16 +31,6 @@ protected:
     Socket_Server *cmd_sock;
 //    UDP_Socket data_sock;
     
-    
-    // Maybe it would be faster to spawn 4 threads and split the image up
-    // to parallellize the data transfer?
-    
-    Socket_Server *sock0;
-    Socket_Server *sock1;
-    Socket_Server *sock2;
-    Socket_Server *sock3;
-//    Socket_Server *sock4;
-//    Socket_Server *sock5;
 
     
     
@@ -66,7 +58,9 @@ private:
     
     // template method to poll for, receive, and handle events from client.
     void poll_client();
-
+    
+    GUI::GUITimer_command *send_image_repeater;
+    GUI::GUITimer_command *poll_client_repeater;
 };
 
 #endif /* defined(__MultiComputer_Tester__ServerApp__) */

@@ -35,15 +35,6 @@ appname(appname_)
     cmd_sock = serv->accept();
 
     
-    // Maybe it would be faster to spawn 4 threads and split the image up
-    // to parallellize the data transfer?
-    
-    //Open all 4 data sockets
-//    sock0 = serv->accept();
-//    sock1 = serv->accept();
-//    sock2 = serv->accept();
-//    sock3 = serv->accept();
-
     
     const int new_w = 200, new_h = 100;
     resize(new_w,new_h);
@@ -51,11 +42,17 @@ appname(appname_)
 
     
     
-    App::get()->repeat_on_timer(bind(&ServerApp::send_image_to_client, this), 0);
-    App::get()->repeat_on_timer(bind(&ServerApp::poll_client, this), 0);
+    send_image_repeater = App::get()->repeat_on_timer(bind(&ServerApp::send_image_to_client, this), 0);
+    poll_client_repeater = App::get()->repeat_on_timer(bind(&ServerApp::poll_client, this), 0);
 }
 
-
+ServerApp::~ServerApp() {
+    delete serv;
+    delete cmd_sock;
+    
+    App::get()->cancel_timer_op(send_image_repeater);
+    App::get()->cancel_timer_op(poll_client_repeater);
+}
 
 void ServerApp::poll_client()
 {
