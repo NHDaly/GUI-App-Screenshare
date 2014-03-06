@@ -80,7 +80,7 @@ StartScreen::StartScreen(Window &window)
 serverStart(create_button(ServerStart(window, this), "Server Start")),
 clientStart(create_button(ClientStart(window, this), "Client Start"))
 {
-    fill_with_color(Light_Gray_Color);
+    fill_with_color(light_gray_color_c);
 
 #ifdef __APPLE__ // Only allow macs to be servers right now.
     TextView *app_name_label(new TextView());
@@ -121,7 +121,7 @@ int main (int argc, char ** argv) {
         App::get()->set_framerate_cap(40);
         App::get()->run(&win);
     }
-    catch (const GUIError &e) {
+    catch (const GUI::Error &e) {
         cout << e.msg << endl;
     }
     

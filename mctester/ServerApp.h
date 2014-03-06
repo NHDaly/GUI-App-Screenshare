@@ -40,9 +40,9 @@ protected:
     
     // Mouse Events. Following three functions all work the same:
     //  Return true if the mouse-event is finished being handled, false otherwise.
-    virtual bool receive_mouse_down(DispPoint coord) = 0;
-    virtual bool receive_mouse_up(DispPoint coord) = 0;
-    virtual bool receive_mouse_motion(DispPoint coord, DispPoint rel_motion) = 0;
+    virtual bool receive_mouse_down(GUI::DispPoint coord) = 0;
+    virtual bool receive_mouse_up(GUI::DispPoint coord) = 0;
+    virtual bool receive_mouse_motion(GUI::DispPoint coord, GUI::DispPoint rel_motion) = 0;
     
     //  up == true, down == false.
     virtual bool receive_mouse_scroll_start(bool up_down) = 0;

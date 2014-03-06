@@ -33,7 +33,7 @@ start_button(create_button(bind(&ClientApp::try_to_connect_and_start, this), "Go
     attach_subview(host_textbox, DispPoint(25, 25));
     attach_subview(start_button, DispPoint(get_w()-125, 50));
     
-    fill_with_color(Light_Gray_Color);
+    fill_with_color(light_gray_color_c);
 
     capture_focus();
     

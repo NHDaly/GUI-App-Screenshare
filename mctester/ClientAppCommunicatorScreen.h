@@ -38,9 +38,9 @@ private:
     
     // Mouse Events. Following three functions all work the same:
     //  Return true if the mouse-event is finished being handled, false otherwise.
-    virtual bool handle_mouse_down(DispPoint coord);
-    virtual bool handle_mouse_up(DispPoint coord);
-    virtual bool handle_mouse_motion(DispPoint coord, DispPoint rel_motion);
+    virtual bool handle_mouse_down(GUI::DispPoint coord);
+    virtual bool handle_mouse_up(GUI::DispPoint coord);
+    virtual bool handle_mouse_motion(GUI::DispPoint coord, GUI::DispPoint rel_motion);
     
     //  up == true, down == false.
     virtual bool handle_mouse_scroll_start(bool up_down);

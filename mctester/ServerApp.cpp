@@ -29,7 +29,7 @@ appname(appname_)
 {
 //    data_sock.bind();
     
-    fill_with_color(Gray_Color);
+    fill_with_color(gray_color_c);
 
     serv->listen();
     cmd_sock = serv->accept();

@@ -66,7 +66,7 @@ void MacServerApp::send_image_to_client()
 
 // Mouse Events. Following three functions all work the same:
 //  Return true if the mouse-event is finished being handled, false otherwise.
-bool MacServerApp::receive_mouse_down(DispPoint coord) {
+bool MacServerApp::receive_mouse_down(GUI::DispPoint coord) {
     
     int appX, appY;
     getWindowPosition(appname, appX, appY);
@@ -84,7 +84,7 @@ bool MacServerApp::receive_mouse_down(DispPoint coord) {
     
     return true;
 }
-bool MacServerApp::receive_mouse_up(DispPoint coord) {
+bool MacServerApp::receive_mouse_up(GUI::DispPoint coord) {
     
     int appX, appY;
     getWindowPosition(appname, appX, appY);
@@ -102,7 +102,7 @@ bool MacServerApp::receive_mouse_up(DispPoint coord) {
     
     return true;
 }
-bool MacServerApp::receive_mouse_motion(DispPoint coord, DispPoint rel_motion) {
+bool MacServerApp::receive_mouse_motion(GUI::DispPoint coord, GUI::DispPoint rel_motion) {
     
     int appX, appY;
     getWindowPosition(appname, appX, appY);
