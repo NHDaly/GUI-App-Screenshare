@@ -29,6 +29,10 @@ void MacServerApp::send_image_to_client()
     
     NSImage *img = [ScreenGrabber getScreenGrabFromRect:NSMakeRect(x, y, w, h)];
     
+    if (img == nil || img == 0 || [img size].height == 0 || [img size].width == 0) {
+        NSLog(@"Image has 0 size!");
+        return;
+    }
     // SAVE IMAGE
     //create a NSBitmapImageRep
     NSBitmapImageRep *bmpImageRep = [[NSBitmapImageRep alloc]initWithData:[img TIFFRepresentation]];

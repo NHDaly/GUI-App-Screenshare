@@ -18,6 +18,6 @@ const int GUI_MOUSESCROLL_START = SDL_USEREVENT;
 const int GUI_MOUSESCROLL_STOP = SDL_USEREVENT+1;
 
 
-const int port_num_k = 8888;
+const int port_num_k = 46678;
 
 #endif

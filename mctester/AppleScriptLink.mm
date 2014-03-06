@@ -59,10 +59,12 @@ void getWindowSize(const string &appname, int &outW, int &outH) {
         [scriptText appendString:[NSString stringWithUTF8String:appCommandName.c_str()]];
         [scriptText appendString:[NSMutableString stringWithUTF8String:GetSizeStr]];
     
-        NSAppleScript *script = [[[NSAppleScript alloc] initWithSource:scriptText] autorelease];
+        NSAppleScript *script = [[NSAppleScript alloc] initWithSource:scriptText];
         
         NSAppleEventDescriptor *result = [script executeAndReturnError:&error];
-            
+    
+        [script release];
+    
 //        DescType descriptorType = [result descriptorType];
 //        NSLog(@"descriptorType == %@", NSFileTypeForHFSTypeCode(descriptorType));
     

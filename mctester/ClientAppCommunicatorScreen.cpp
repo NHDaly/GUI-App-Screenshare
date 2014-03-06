@@ -30,9 +30,17 @@ ClientAppCommunicatorScreen::ClientAppCommunicatorScreen(Socket_Client *cmd_sock
 {
     capture_focus();
     
-    App::get()->repeat_on_timer(bind(&ClientAppCommunicatorScreen::poll_server_for_image,
-                                     this),
-                                0);
+    poll_image_repeater = App::get()->repeat_on_timer(bind(&ClientAppCommunicatorScreen::poll_server_for_image,
+                                                           this),
+                                                      0);
+}
+
+ClientAppCommunicatorScreen::~ClientAppCommunicatorScreen() {
+    
+    lose_focus();
+    
+    App::get()->cancel_timer_op(poll_image_repeater);
+    delete cmd_sock;
 }
 
 

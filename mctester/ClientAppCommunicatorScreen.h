@@ -13,10 +13,15 @@
 
 #include "utility/SocketClasses.h"
 
+namespace GUI {
+    struct GUITimer_command;
+}
+
 class Socket_Client;
 class ClientAppCommunicatorScreen : public GUI::View {
 public:
     ClientAppCommunicatorScreen(Socket_Client *cmd_sock, UDP_Socket data_sock);
+    ~ClientAppCommunicatorScreen();
     
 private:
     
@@ -49,6 +54,8 @@ private:
     virtual bool handle_key_down(SDL_keysym key);
     virtual bool handle_key_up(SDL_keysym key);
     
+private:
+    GUI::GUITimer_command *poll_image_repeater;
 };
 
 

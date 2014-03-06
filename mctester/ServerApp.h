@@ -20,6 +20,7 @@ class Socket_Server;
 class ServerApp : public GUI::View {
 public:
     ServerApp(const std::string &appname);
+//    ~ServerApp();
     
 protected:
     

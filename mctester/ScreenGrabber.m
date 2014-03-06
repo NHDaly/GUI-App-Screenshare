@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Lions Entertainment. All rights reserved.
 //
 
-// --------------- Necessary for screen grabbing, apparently: ---------------
+// --------------- Profiling info for screen grabbing, apparently: ---------------
 #pragma mark Basic Profiling Tools
 // Set to 1 to enable basic profiling. Profiling information is logged to console.
 #ifndef PROFILE_WINDOW_GRAB
@@ -31,8 +31,16 @@
 
 +(NSImage*)getScreenGrabFromRect:(NSRect)rect
 {
-    float x = rect.origin.x, y = rect.origin.y;
-    float w = rect.size.width, h = rect.size.height;
+    const float x = rect.origin.x;
+    const float y = rect.origin.y;
+    const float w = rect.size.width;
+    const float h = rect.size.height;
+ 
+    if (w == 0 || h == 0) {
+        NSLog(@"Cannot get a screen grab with 0 size!");
+        return nil;
+    }
+    
     
     NSBitmapImageRep *bitmapRep = [[NSBitmapImageRep alloc] initWithCGImage:[self createScreenShot]];
     // Create an NSImage and add the bitmap rep to it...
@@ -50,6 +58,21 @@
     
     //Init target image
     NSImage *target = [[NSImage alloc]initWithSize:NSMakeSize(w,h)];
+    
+    if ([target size].width == 0 || [target size].height == 0) {
+        NSLog(@"Cannot put a screen grab into target with 0 size!");
+        
+        [source release];
+        [target release];
+        return nil;
+    }
+    if ([source size].width == 0 || [source size].height == 0) {
+        NSLog(@"Cannot use a screen grab with 0 size!");
+        
+        [source release];
+        [target release];
+        return nil;
+    }
     
     //start drawing on target
     [target lockFocus];

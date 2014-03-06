@@ -16,6 +16,8 @@
 using namespace std;
 using namespace GUI;
 
+void reset_after_disconnection(const SocketError &);
+
 template <typename T>
 void printError(const T &e) {
     
@@ -81,10 +83,18 @@ clientStart(create_button(ClientStart(window, this), "Client Start"))
     fill_with_color(Light_Gray_Color);
 
 #ifdef __APPLE__ // Only allow macs to be servers right now.
+    TextView *app_name_label(new TextView());
+    app_name_label->set_text("Enter name of App to Serve:");
+    app_name_label->set_text_size(12);
+    attach_subview(app_name_label, DispPoint(50, 80));
     attach_subview(textbox, DispPoint(50, 100));
     attach_subview(serverStart, DispPoint(300, 100));
 #endif
 
+    TextView *client_label(new TextView(300, 200));
+    client_label->set_text("Share an app from a remote server.");
+    client_label->set_text_size(12);
+    attach_subview(client_label, DispPoint(250, 180));
     attach_subview(clientStart, DispPoint(300, 200));
     
 }
@@ -97,8 +107,7 @@ int main (int argc, char ** argv) {
     string app = "Game Maker for Mac";
 
     try {
-		typedef void(*SocketErorFuncPtr_t)(const SocketError&);
-        App::get()->register_exception_handler<SocketError>((SocketErorFuncPtr_t)&printError<SocketError>);
+        App::get()->register_exception_handler<SocketError>(&reset_after_disconnection);
         
         Window win(600, 400);
 //        View *view(new GUICommunicator(GUIImage("screensh.bmp"), app));
@@ -109,7 +118,7 @@ int main (int argc, char ** argv) {
 //        win.attach_subview(new ClientApp(), DispPoint());
         win.attach_subview(new StartScreen(win), DispPoint());
 
-        App::get()->set_framerate_cap(60);
+        App::get()->set_framerate_cap(40);
         App::get()->run(&win);
     }
     catch (const GUIError &e) {
@@ -118,7 +127,14 @@ int main (int argc, char ** argv) {
     
     return 0;
 }
-
+ 
+void reset_after_disconnection(const SocketError &) {
+    Window *win = App::get()->get_window();
+    delete win->remove_last_subview();
+    win->attach_subview(new StartScreen(*win), DispPoint());
+    win->resize(win->get_main_view()->get_w(), win->get_main_view()->get_h());
+    
+}
 
 
 
