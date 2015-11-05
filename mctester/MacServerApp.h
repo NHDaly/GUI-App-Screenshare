@@ -13,7 +13,8 @@
 
 class MacServerApp : public ServerApp {
 public:
-    MacServerApp(const std::string &appname) : ServerApp(appname) { }
+    MacServerApp(const std::string &appname, const PortNum_t port)
+    : ServerApp(appname, port) { }
 
 private:
     

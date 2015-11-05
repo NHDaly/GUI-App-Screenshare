@@ -7,7 +7,6 @@
 //
 
 #include "ServerApp.h"
-#include "sharedConstants.h"
 
 #include "gui/GUIApp.h"
 #include "gui/GUIWindow.h"
@@ -21,8 +20,8 @@ using namespace GUI;
 using namespace std::tr1;
 
 
-ServerApp::ServerApp(const string &appname_)
-:View(400,200), serv(new Socket_Server(port_num_k)),
+ServerApp::ServerApp(const string &appname_, const PortNum_t port)
+:View(400,200), serv(new Socket_Server(port)),
 cmd_sock(0),
 //data_sock(port_num_k+1),
 appname(appname_)

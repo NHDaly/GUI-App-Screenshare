@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		23043E5417A6204100FC6466 /* AppleScriptLink.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23043E5217A6204100FC6466 /* AppleScriptLink.mm */; };
 		23043E5717A627DE00FC6466 /* ScreenGrabber.m in Sources */ = {isa = PBXBuildFile; fileRef = 23043E5617A627DE00FC6466 /* ScreenGrabber.m */; };
+		230445821BEB1A7B00BB7760 /* ServerAppStartScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 230445801BEB1A7B00BB7760 /* ServerAppStartScreen.cpp */; settings = {ASSET_TAGS = (); }; };
 		233511E417ADD98C003B256A /* MacServerApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 233511E217ADD98B003B256A /* MacServerApp.mm */; };
 		2373EFF1176A93B8008EC435 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2373EFF0176A93B8008EC435 /* Cocoa.framework */; };
 		2373EFFB176A93B8008EC435 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2373EFF9176A93B8008EC435 /* InfoPlist.strings */; };
@@ -78,6 +79,8 @@
 		23043E5317A6204100FC6466 /* AppleScriptLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleScriptLink.h; sourceTree = "<group>"; };
 		23043E5517A627DE00FC6466 /* ScreenGrabber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenGrabber.h; sourceTree = "<group>"; };
 		23043E5617A627DE00FC6466 /* ScreenGrabber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenGrabber.m; sourceTree = "<group>"; };
+		230445801BEB1A7B00BB7760 /* ServerAppStartScreen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ServerAppStartScreen.cpp; sourceTree = "<group>"; };
+		230445811BEB1A7B00BB7760 /* ServerAppStartScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerAppStartScreen.h; sourceTree = "<group>"; };
 		233511E217ADD98B003B256A /* MacServerApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MacServerApp.mm; sourceTree = "<group>"; };
 		233511E317ADD98B003B256A /* MacServerApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacServerApp.h; sourceTree = "<group>"; };
 		2342131F17ADCAA90045C4B4 /* example.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = example.cpp; sourceTree = "<group>"; };
@@ -350,6 +353,8 @@
 		23C844D817A657D000257B84 /* Sever */ = {
 			isa = PBXGroup;
 			children = (
+				230445801BEB1A7B00BB7760 /* ServerAppStartScreen.cpp */,
+				230445811BEB1A7B00BB7760 /* ServerAppStartScreen.h */,
 				23C844CD17A64A5D00257B84 /* ServerApp.h */,
 				23C2691417AE3542001DEC54 /* ServerApp.cpp */,
 				233511DE17ADD714003B256A /* Windows Server */,
@@ -443,6 +448,7 @@
 				23C844C817A6431700257B84 /* main.cpp in Sources */,
 				23EA9BBC18C9317800D50178 /* GUIController.cpp in Sources */,
 				23C844D117A64A6400257B84 /* ClientApp.cpp in Sources */,
+				230445821BEB1A7B00BB7760 /* ServerAppStartScreen.cpp in Sources */,
 				23C844D617A652CC00257B84 /* ClientAppCommunicatorScreen.cpp in Sources */,
 				23EA9BBA18C9317800D50178 /* GUIApp.cpp in Sources */,
 				23EA9BCD18C9317800D50178 /* GUIWindow.cpp in Sources */,

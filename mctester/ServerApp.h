@@ -12,6 +12,7 @@
 #include "gui/GUIView.h"
 #include "gui/GUITextViews.h"
 #include "utility/SocketClasses.h"
+#include "sharedConstants.h"
 
 #include <string>
 
@@ -21,7 +22,7 @@ namespace GUI {
 }
 class ServerApp : public GUI::View {
 public:
-    ServerApp(const std::string &appname);
+    ServerApp(const std::string &appname, const PortNum_t port);
     ~ServerApp();
     
 protected:

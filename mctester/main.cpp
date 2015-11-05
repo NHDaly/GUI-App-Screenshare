@@ -6,7 +6,7 @@
 #include "gui/GUITextViews.h"
 #include "gui/GUIMsg.h"
 
-#include "MacServerApp.h"
+#include "ServerAppStartScreen.h"
 #include "ClientApp.h"
 
 #include "utility/SocketClasses.h"
@@ -47,14 +47,7 @@ struct ServerStart {
     
     void operator() () {
         window.remove_subview(start_screen);
-
-        ServerApp *server = 0;
-#ifdef __APPLE__ 
-        server = new MacServerApp(start_screen->textbox->get_text());
-#else
-        //server = new WindowsServerApp(start_screen->textbox->get_text());
-#endif
-        window.attach_subview(server, DispPoint());
+        window.attach_subview(new ServerAppStartScreen, DispPoint());
     }
     
     Window &window;
@@ -76,26 +69,25 @@ struct ClientStart {
 };
 
 StartScreen::StartScreen(Window &window)
-: View (600, 400), textbox(new TextBox(200, 20)),
+: View (600, 400), textbox(new TextBox(250, 20)),
 serverStart(create_button(ServerStart(window, this), "Server Start")),
 clientStart(create_button(ClientStart(window, this), "Client Start"))
 {
     fill_with_color(light_gray_color_c);
 
 #ifdef __APPLE__ // Only allow macs to be servers right now.
-    TextView *app_name_label(new TextView());
-    app_name_label->set_text("Enter name of App to Serve:");
+    TextView *app_name_label(new TextView(250));
+    app_name_label->set_text("Screenshare an app on this computer.");
     app_name_label->set_text_size(12);
-    attach_subview(app_name_label, DispPoint(50, 80));
-    attach_subview(textbox, DispPoint(50, 100));
-    attach_subview(serverStart, DispPoint(300, 100));
+    attach_subview(app_name_label, DispPoint(250, 80));
+    attach_subview(serverStart, DispPoint(350, 100));
 #endif
 
     TextView *client_label(new TextView(300, 200));
     client_label->set_text("Share an app from a remote server.");
     client_label->set_text_size(12);
     attach_subview(client_label, DispPoint(250, 180));
-    attach_subview(clientStart, DispPoint(300, 200));
+    attach_subview(clientStart, DispPoint(350, 200));
     
 }
 
