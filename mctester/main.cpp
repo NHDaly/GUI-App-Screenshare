@@ -10,6 +10,7 @@
 #include "ClientApp.h"
 
 #include "utility/SocketClasses.h"
+#include "utility/NathanUtility.h"
 
 
 #include <iostream>
@@ -17,6 +18,7 @@ using namespace std;
 using namespace GUI;
 
 void reset_after_disconnection(const SocketError &);
+void display_user_error(const UserError &);
 
 template <typename T>
 void printError(const T &e) {
@@ -100,6 +102,7 @@ int main (int argc, char ** argv) {
 
     try {
         App::get()->register_exception_handler<SocketError>(&reset_after_disconnection);
+        App::get()->register_exception_handler<UserError>(&display_user_error);
         
         Window win(600, 400);
 //        View *view(new GUICommunicator(GUIImage("screensh.bmp"), app));
@@ -120,13 +123,27 @@ int main (int argc, char ** argv) {
     return 0;
 }
  
-void reset_after_disconnection(const SocketError &) {
+void reset_after_disconnection(const SocketError &error) {
     Window *win = App::get()->get_window();
     delete win->remove_last_subview();
     View *start = new StartScreen(*win);
     win->attach_subview(start, DispPoint());
     win->resize(start->get_w(), start->get_h());
     
+    display_user_error(UserError(error.msg));
+}
+
+void display_user_error(const UserError &error) {
+    Window *win = App::get()->get_window();
+    DispPoint dim = win->get_dim();
+    
+    TextView *error_view = new TextView(dim.x/2);
+    error_view->set_text(error.msg);
+    win->attach_subview(error_view, DispPoint(dim.x/3, dim.y - 100));
+  
+    sleep(4);
+    delete win->remove_last_subview();
+
 }
 
 

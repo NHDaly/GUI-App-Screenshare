@@ -58,7 +58,7 @@ void MacServerApp::send_image_to_client()
     //    data_sock.send_value((int32_t)[data length]);
     //    data_sock.send_to(string((char*)[data bytes], [data length]));
     cmd_sock->send_value((int32_t)[data length]);
-    cmd_sock->send(string((char*)[data bytes], [data length]));
+    cmd_sock->send(string((char*)[data bytes], [data length]), SO_NOSIGPIPE);
     
     
 }
