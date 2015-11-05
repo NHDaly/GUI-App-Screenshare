@@ -130,18 +130,21 @@ void reset_after_disconnection(const SocketError &error) {
     win->attach_subview(start, DispPoint());
     win->resize(start->get_w(), start->get_h());
     
-    display_user_error(UserError(error.msg));
+    display_user_error(UserError("Network Error: " + error.msg));
 }
 
 void display_user_error(const UserError &error) {
     Window *win = App::get()->get_window();
     DispPoint dim = win->get_dim();
-    
-    TextView *error_view = new TextView(dim.x/2);
+
+    TextView *error_view = new TextView(dim.x);
     error_view->set_text(error.msg);
+    error_view->set_text_size(14);
+    SDL_Color dark_red_c = { 0xf0, 0, 0x11, 0 };
+    error_view->set_text_color(dark_red_c);
     win->attach_subview(error_view, DispPoint(dim.x/3, dim.y - 100));
   
-    sleep(4);
+    App::get()->sleep(4);
     delete win->remove_last_subview();
 
 }

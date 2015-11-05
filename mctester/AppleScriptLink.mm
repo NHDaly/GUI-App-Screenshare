@@ -7,6 +7,7 @@
 //
 
 #include "AppleScriptLink.h"
+#include "utility/NathanUtility.h"
 
 using namespace std;
 
@@ -26,7 +27,7 @@ void getWindowPosition(const string &appname, int &outX, int &outY) {
     
     NSDictionary *error = nil;
     
-    string appCommandName = "\"" + appname + "\"\n";
+    string appCommandName = '"' + appname + '"' + '\n';
     
     NSMutableString *scriptText = [NSMutableString stringWithUTF8String:AppTellStr];
     [scriptText appendString:[NSString stringWithUTF8String:appCommandName.c_str()]];
@@ -39,6 +40,10 @@ void getWindowPosition(const string &appname, int &outX, int &outY) {
 //    DescType descriptorType = [result descriptorType];
 //    NSLog(@"descriptorType == %@", NSFileTypeForHFSTypeCode(descriptorType));
 
+    if (error.count != 0) {
+        NSString* error_msg = [error objectForKey:@"NSAppleScriptErrorMessage"];
+        throw UserError([error_msg UTF8String]);
+    }
     // returns a list of 2 elements
     NSData *dataX = [[result descriptorAtIndex:1] data];
     NSData *dataY = [[result descriptorAtIndex:2] data];
