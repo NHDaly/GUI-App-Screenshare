@@ -51,6 +51,10 @@
 		23EA9BD418C9317800D50178 /* SDL_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EA9BB418C9317800D50178 /* SDL_ttf.framework */; };
 		23EA9BD518C9317800D50178 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EA9BB518C9317800D50178 /* SDL.framework */; };
 		23EA9BD618C9317800D50178 /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 23EA9BB718C9317800D50178 /* SDLMain.m */; };
+		23FC06F419931213000B18D6 /* SDL_image.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 23EA9BB218C9317800D50178 /* SDL_image.framework */; };
+		23FC06F519931213000B18D6 /* SDL_mixer.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 23EA9BB318C9317800D50178 /* SDL_mixer.framework */; };
+		23FC06F619931213000B18D6 /* SDL_ttf.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 23EA9BB418C9317800D50178 /* SDL_ttf.framework */; };
+		23FC06F719931213000B18D6 /* SDL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 23EA9BB518C9317800D50178 /* SDL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,6 +64,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				23FC06F419931213000B18D6 /* SDL_image.framework in CopyFiles */,
+				23FC06F519931213000B18D6 /* SDL_mixer.framework in CopyFiles */,
+				23FC06F619931213000B18D6 /* SDL_ttf.framework in CopyFiles */,
+				23FC06F719931213000B18D6 /* SDL.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,7 +385,7 @@
 		2373EFE3176A93B8008EC435 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Lions Entertainment";
 			};
 			buildConfigurationList = 2373EFE6176A93B8008EC435 /* Build configuration list for PBXProject "MultiComputer Tester" */;
@@ -480,7 +488,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -507,7 +514,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
