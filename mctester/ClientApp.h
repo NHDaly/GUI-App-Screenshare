@@ -19,7 +19,10 @@ public:
     
 private:
     
-    GUI::TextBox *host_textbox;
+    GUI::TextView *host_label;
+    GUI::TextBox *host_ip_textbox;
+    GUI::TextView *host_port_label;
+    GUI::TextBox *host_port_textbox;
     GUI::Button *start_button;
 
     
