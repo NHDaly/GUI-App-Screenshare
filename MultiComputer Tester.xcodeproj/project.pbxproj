@@ -51,10 +51,10 @@
 		23EA9BD418C9317800D50178 /* SDL_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EA9BB418C9317800D50178 /* SDL_ttf.framework */; };
 		23EA9BD518C9317800D50178 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23EA9BB518C9317800D50178 /* SDL.framework */; };
 		23EA9BD618C9317800D50178 /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 23EA9BB718C9317800D50178 /* SDLMain.m */; };
-		23FC06F419931213000B18D6 /* SDL_image.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 23EA9BB218C9317800D50178 /* SDL_image.framework */; };
-		23FC06F519931213000B18D6 /* SDL_mixer.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 23EA9BB318C9317800D50178 /* SDL_mixer.framework */; };
-		23FC06F619931213000B18D6 /* SDL_ttf.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 23EA9BB418C9317800D50178 /* SDL_ttf.framework */; };
-		23FC06F719931213000B18D6 /* SDL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 23EA9BB518C9317800D50178 /* SDL.framework */; };
+		23FC06F419931213000B18D6 /* SDL_image.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 23EA9BB218C9317800D50178 /* SDL_image.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		23FC06F519931213000B18D6 /* SDL_mixer.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 23EA9BB318C9317800D50178 /* SDL_mixer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		23FC06F619931213000B18D6 /* SDL_ttf.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 23EA9BB418C9317800D50178 /* SDL_ttf.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		23FC06F719931213000B18D6 /* SDL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 23EA9BB518C9317800D50178 /* SDL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -385,7 +385,7 @@
 		2373EFE3176A93B8008EC435 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Lions Entertainment";
 			};
 			buildConfigurationList = 2373EFE6176A93B8008EC435 /* Build configuration list for PBXProject "MultiComputer Tester" */;
@@ -489,6 +489,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -542,6 +543,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mctester/MultiComputer Tester-Prefix.pch";
 				INFOPLIST_FILE = "mctester/MultiComputer Tester-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "Nathan-Daly.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "MultiComputer Tester";
 				WRAPPER_EXTENSION = app;
 			};
@@ -560,6 +562,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mctester/MultiComputer Tester-Prefix.pch";
 				INFOPLIST_FILE = "mctester/MultiComputer Tester-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "Nathan-Daly.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "MultiComputer Tester";
 				WRAPPER_EXTENSION = app;
 			};
