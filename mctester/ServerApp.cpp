@@ -12,6 +12,7 @@
 #include "gui/GUIWindow.h"
 #include "utility/SocketClasses.h"
 #include "gui/Compatibility.h"
+#include "gui/GUIButton.h"
 
 #include TR1_FUNCTIONAL_H
 
@@ -19,6 +20,9 @@ using namespace std;
 using namespace GUI;
 using namespace std::tr1;
 
+void ReturnToMainScreen() {
+    throw SocketError("");
+}
 
 ServerApp::ServerApp(const string &appname_, const PortNum_t port)
 :View(400,200), serv(new Socket_Server(port)),
@@ -39,6 +43,8 @@ appname(appname_)
     resize(new_w,new_h);
     App::get()->get_window()->resize(new_w,new_h);
 
+    
+    attach_subview(create_button(&ReturnToMainScreen, "Stop"), DispPoint(10,10));
     
     
     send_image_repeater = App::get()->repeat_on_timer(bind(&ServerApp::send_image_to_client, this), 0);
